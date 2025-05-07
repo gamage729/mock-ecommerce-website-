@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopigo | Your One-Stop Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Shopigo</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="home-link" class="active">Home</a></li>
+                    <li><a href="#categories" id="electronics-link">Electronics</a></li>
+                    <li><a href="#categories" id="clothing-link">Clothing</a></li>
+                    <li><a href="#categories" id="home-kitchen-link">Home & Kitchen</a></li>
+                    <li><a href="#" class="register-btn" id="nav-register-btn">Register</a> </li>
+                    <li>
+                        <a href="basket.html" class="basket-icon">
+                            🛒 <span class="basket-count" id="basket-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="main-content">
+            <!-- Hero Section -->
+            <div class="hero"> 
+                <div class="hero-banner">
+                    <div class="banner-slide active" style="background-image: url('images/banner1.png')"></div>
+                    <div class="banner-slide" style="background-image: url('images/banner2.png')"></div>
+                    <div class="banner-slide" style="background-image: url('images/banner3.png')"></div>
+                </div>
+                <div class="hero-content">
+                    <h1>Welcome to Shopigo</h1>
+                    <p>Find amazing deals on electronics, clothing, and home essentials.</p>
+                    <a href="#products" class="btn">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories" id="categories">
+                <div class="category-card" data-category="electronics">      
+                    <img src="images/electronicsCard.png" alt="Electronics">    
+                    <div class="text-overlay">
+                        <h3>Electronics</h3>
+                        <p>Latest gadgets and devices</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="clothing">
+                    <img src="images/clothingCard.png" alt="Clothing">
+                    <div class="text-overlay">
+                        <h3>Clothing</h3>
+                        <p>Trendy fashion for everyone</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="home">
+                    <img src="images/homeAndKitchenCard.png" alt="Home & Kitchen">
+                    <div class="text-overlay">
+                        <h3>Home & Kitchen</h3>
+                        <p>Essentials for your living space</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="filters">
+                <div class="filter-header">
+                    <div class="filter-options">
+                        <div class="filter-option active" data-filter="all">All Products</div>
+                        <div class="filter-option" data-filter="electronics">Electronics</div>
+                        <div class="filter-option" data-filter="clothing">Clothing</div>
+                        <div class="filter-option" data-filter="home">Home & Kitchen</div>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search products...">
+                        <button id="search-btn" class="search-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div class="products" id="products">
+                <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Shopigo</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Corporate Responsibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Shopigo. All rights reserved. (Mock E-commerce Project)</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="product-detail" id="product-detail">
+                <!-- Product detail content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <!-- Register Popup -->
+<div class="register-popup" id="register-popup">
+    <div class="register-container">
+      <button class="close-register" id="close-register">&times;</button>
+      <div class="register-header">
+        <h1>Register</h1>
+        <p class="tagline">Create your account to start shopping!</p>
+      </div>
+      <form class="register-form">
+        <div class="form-group">
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" placeholder="Create a password" required />
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+  
+      <div class="social-divider"><span>or register with</span></div>
+      <div class="social-register">
+        <button class="social-btn google-btn">
+          <img src="images/google-logo.png" alt="Google" class="social-icon" />
+          <span>Sign up with Google</span>
+        </button>
+        <button class="social-btn facebook-btn">
+          <img src="images/facebook-logo.png" alt="Facebook" class="social-icon" />
+          <span>Sign up with Facebook</span>
+        </button>
+      </div>
+  
+      <div class="register-footer">
+        <a href="#">Already have an account?</a>
+        <a href="#">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+  
+
+    <script src="script.js" defer></script>
+</body>
+</html>
